@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berzloy Family</title>
+    <link href="https://s1856848.storeland.ru/admin/settings_domain_reg" rel="stylesheet">
+    <style>
+        body {
+            display:  flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('271590_screenshots_2015-04-19_00034.jpg') no-repeat;
+            color: #fff;
+            overflow: hidden;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            flex-direction: column;
+        }
+        .title {
+            font-size: 4rem;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            animation: flicker 2s infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .hidden-blades {
+            position: absolute;
+            width: 2px;
+            height: 50%;
+            background: linear-gradient(to top, transparent, rgba(255, 255, 255, 0.8));
+            animation: blades-fall 3s infinite ease-in-out;
+        }
+
+        @keyframes blades-fall {
+            0% { top: -10%; opacity: 0; }
+            50% { opacity: 1; }
+            100% { top: 110%; opacity: 0; }
+        }
+
+        .hidden-blades:nth-child(1) { left: 20%; animation-delay: 0.2s; }
+        .hidden-blades:nth-child(2) { left: 40%; animation-delay: 0.5s; }
+        .hidden-blades:nth-child(3) { left: 60%; animation-delay: 0.8s; }
+        .hidden-blades:nth-child(4) { left: 80%; animation-delay: 1s; }
+
+        .logo {
+            width: 600px;
+            height: auto;
+            animation: fade-in 3s ease-in-out;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            transform: scale(1.2) rotate(10deg);
+            filter: brightness(1.5);
+        }
+
+        @keyframes fade-in {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Добро пожаловать в семью</div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScSxCBSpfFr3XC2ruDjpkS2fxwyWxz5lSdltWY7KMs3AIH0Ew/viewform?fbzx=2917958057927733022" target="_blank">
+            <img src="Wolf.png" alt="Wolf Logo" class="logo">
+        </a>
+        <div class="hidden-blades"></div>
+        <div class="hidden-blades"></div>
+        <div class="hidden-blades"></div>
+        <div class="hidden-blades"></div>
+    </div>
+    <div class="footer">Нажми на логотип для подачи заявки в семью</div>
+</body>
+</html>
